@@ -42,26 +42,21 @@ function MainPage() {
   return (
     <View style={styles.container}>
       <View>
-    
-      <CircularProgress value={58} />
-      <CircularProgress
-        value={20}
-        radius={120}
-        duration={2000}
-        progressValueColor={'#ecf0f1'}
-        maxValue={200}
-        title={'KM/H'}
-        titleColor={'white'}
-        titleStyle={{fontWeight: 'bold'}}
-      />
-
+        {/* <CircularProgress value={58} /> */}
+        <CircularProgress
+          value={20}
+          radius={120}
+          duration={2000}
+          progressValueColor={"#ecf0f1"}
+          maxValue={200}
+          title={"KM/H"}
+          titleColor={"white"}
+          titleStyle={{ fontWeight: "bold" }}
+        />
       </View>
-      <View style={[styles.circle, { backgroundColor: circleColor }]}>
-        {data.map((feed) => (
-          <Text key={feed.entry_id}>{feed.field1}</Text>
-        ))}
-        <Volume volume="500" />
-      </View>
+      {data.map((feed) => (
+        <Text key={feed.entry_id}>{feed.field1}</Text>
+      ))}
       <Pressable
         style={styles.buttonContainer}
         title="Self-cleaning"
@@ -80,10 +75,7 @@ function MainPage() {
       >
         <Text>Statistic</Text>
       </Pressable>
-
     </View>
-
-    
   );
 }
 
