@@ -1,7 +1,6 @@
 import { View, Text, Dimensions, StyleSheet } from "react-native";
 import { BarChart } from "react-native-chart-kit";
 import StatisticBox from "./StatisticBox";
-import CircularProgress from "react-native-circular-progress-indicator";
 
 function Statistic() {
   const data = {
