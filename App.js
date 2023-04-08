@@ -36,7 +36,20 @@ export default function App() {
             name="FriendsPage"
             component={FriendsPage}
           />
-          <Stack.Screen name="Statistic" component={Statistic} />
+          <Stack.Screen
+            name="Statistic"
+            component={Statistic}
+            options={{
+              headerStyle: {
+                backgroundColor: "#2B2B2B",
+                height: 100,
+              },
+              headerTintColor: "#73AAFC",
+              headerTitleStyle: {
+                fontSize: 41,
+              },
+            }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </View>

@@ -60,21 +60,6 @@ function MainPage() {
       <Pressable style={styles.buttonContainer} onPress={testClick}>
         <Text>Find my bottle</Text>
       </Pressable>
-      <Pressable
-        title="Friends"
-        style={styles.buttonContainer}
-        onPress={navigateToFriends}
-      >
-        <Text>Friends</Text>
-      </Pressable>
-
-      <Pressable
-        title="Battery"
-        style={styles.buttonContainer}
-        onPress={testClick}
-      >
-        <Text>Battery</Text>
-      </Pressable>
 
       <Pressable
         title="Statistic"
