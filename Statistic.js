@@ -15,9 +15,13 @@ function Statistic() {
   };
 
   const chartConfig = {
-    backgroundColor: "#000000", // set background color to black
+    backgroundColor: "white",
+    // backgroundGradientFrom: "#ffffff",
+    // backgroundGradientFromOpacity: 0.5,
+    // backgroundGradientto: "#00000",
+
     decimalPlaces: 0, // optional, defaults to 2dp
-    color: (opacity = 1) => `rgba(255, 167, 38, ${opacity})`, // set color to orange
+    color: (opacity = 1) => `rgba(35, 150, 250, ${opacity})`, // set color to orange
     labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`, // set label color to white
     style: {
       borderRadius: 16,
@@ -39,7 +43,7 @@ function Statistic() {
           height={300}
           yAxisLabel="mL"
           chartConfig={chartConfig}
-          verticalLabelRotation={30}
+          verticalLabelRotation={0}
           style={{
             borderRadius: 16,
             borderWidth: 1,
@@ -47,10 +51,14 @@ function Statistic() {
           }}
         />
       </View>
-      <StatisticBox name="Total Intake" value="17" />
-      <StatisticBox name="Average Intake" value="17" />
-      <StatisticBox name="Improvement over last week" value="17" />
-      <StatisticBox name="Comulative score" value="17" />
+      <View style={{ flexDirection: "row" }}>
+        <StatisticBox name="Total Intake" value="17" />
+        <StatisticBox name="Average Intake" value="17" />
+      </View>
+      <View style={{ flexDirection: "row" }}>
+        <StatisticBox name="Improvement" value="17" />
+        <StatisticBox name="Cumulative score" value="17" />
+      </View>
     </View>
   );
 }
@@ -58,7 +66,7 @@ function Statistic() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#2B2B2B",
+    backgroundColor: "rgba(30,150,255,0.9)",
     alignItems: "center",
     justifyContent: "center",
     padding: 10,
