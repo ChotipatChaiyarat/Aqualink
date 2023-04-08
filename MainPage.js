@@ -50,7 +50,7 @@ function MainPage() {
         duration={2000}
         progressValueColor={'#ecf0f1'}
         maxValue={200}
-        title={'KM/H'}
+        title={'Litress'}
         titleColor={'white'}
         titleStyle={{fontWeight: 'bold'}}
       />
