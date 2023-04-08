@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Pressable } from "react-native";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import CircularProgress from "react-native-circular-progress-indicator";
 import { useNavigation } from "@react-navigation/native";
 import Volume from "./Volume";
 
@@ -42,7 +42,19 @@ function MainPage() {
   return (
     <View style={styles.container}>
       <View>
-        <Text>Current Volume</Text>
+    
+      <CircularProgress value={58} />
+      <CircularProgress
+        value={20}
+        radius={120}
+        duration={2000}
+        progressValueColor={'#ecf0f1'}
+        maxValue={200}
+        title={'KM/H'}
+        titleColor={'white'}
+        titleStyle={{fontWeight: 'bold'}}
+      />
+
       </View>
       <View style={[styles.circle, { backgroundColor: circleColor }]}>
         {data.map((feed) => (
@@ -68,7 +80,10 @@ function MainPage() {
       >
         <Text>Statistic</Text>
       </Pressable>
+
     </View>
+
+    
   );
 }
 
